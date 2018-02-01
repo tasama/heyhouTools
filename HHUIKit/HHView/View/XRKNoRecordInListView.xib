@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="gvd-fA-sGo" customClass="XRKNoRecordInListView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IuC-G4-DG5" userLabel="content view">
+                    <rect key="frame" x="50" y="70" width="275" height="218"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="67g-aH-p5T">
+                            <rect key="frame" x="98" y="0.0" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="PTW-en-hz2"/>
+                                <constraint firstAttribute="height" constant="80" id="pLF-gi-lqQ"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQs-3x-TJB">
+                            <rect key="frame" x="0.0" y="177" width="275" height="41"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="Mf2-yK-5XM"/>
+                            </constraints>
+                            <connections>
+                                <action selector="nextAction:" destination="gvd-fA-sGo" eventType="touchUpInside" id="7aU-KW-0rT"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提示语" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttd-11-zYf">
+                            <rect key="frame" x="0.0" y="95" width="275" height="14"/>
+                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Ttd-11-zYf" secondAttribute="trailing" id="7nJ-Fw-Zxx"/>
+                        <constraint firstItem="67g-aH-p5T" firstAttribute="centerX" secondItem="IuC-G4-DG5" secondAttribute="centerX" id="AGk-zj-4H4"/>
+                        <constraint firstItem="QQs-3x-TJB" firstAttribute="leading" secondItem="IuC-G4-DG5" secondAttribute="leading" id="CA8-uN-fdH"/>
+                        <constraint firstItem="Ttd-11-zYf" firstAttribute="top" secondItem="67g-aH-p5T" secondAttribute="bottom" constant="15" id="Epg-Ia-b7y"/>
+                        <constraint firstAttribute="bottom" secondItem="QQs-3x-TJB" secondAttribute="bottom" id="Zed-J2-Z9T"/>
+                        <constraint firstItem="67g-aH-p5T" firstAttribute="top" secondItem="IuC-G4-DG5" secondAttribute="top" id="eCg-vB-DqP"/>
+                        <constraint firstItem="Ttd-11-zYf" firstAttribute="leading" secondItem="IuC-G4-DG5" secondAttribute="leading" id="k91-3V-V4O"/>
+                        <constraint firstAttribute="height" constant="218" id="muu-yd-AJK"/>
+                        <constraint firstAttribute="trailing" secondItem="QQs-3x-TJB" secondAttribute="trailing" id="niA-9N-QM8"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="IuC-G4-DG5" secondAttribute="trailing" constant="50" id="Zf6-tc-eG0"/>
+                <constraint firstItem="IuC-G4-DG5" firstAttribute="leading" secondItem="gvd-fA-sGo" secondAttribute="leading" constant="50" id="g50-fc-S6D"/>
+                <constraint firstItem="IuC-G4-DG5" firstAttribute="top" secondItem="gvd-fA-sGo" secondAttribute="top" constant="70" id="jdg-G8-d2H"/>
+            </constraints>
+            <connections>
+                <outlet property="btnNextAction" destination="QQs-3x-TJB" id="eJY-mp-Y5x"/>
+                <outlet property="imgViewIcon" destination="67g-aH-p5T" id="hkV-dM-q94"/>
+                <outlet property="labelTitle" destination="Ttd-11-zYf" id="XYn-tn-fp5"/>
+            </connections>
+            <point key="canvasLocation" x="624" y="344"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
